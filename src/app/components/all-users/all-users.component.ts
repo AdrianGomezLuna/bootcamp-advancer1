@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
+import { Users } from '../../interface/users.interface';
 
 @Component({
   selector: 'app-all-users',
@@ -8,7 +9,7 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class AllUsersComponent implements OnInit {
 
-  public allUsers: any[]  = [];
+  public allUsers: Users[]  = [];
   public displayedColumns: string[] = ['id','name','username',"actions"]
 
   constructor(private usersService: UsersService) { }

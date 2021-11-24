@@ -38,6 +38,10 @@ export class UserCreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Create user button
+   * @param users
+   */
   create(users: Users) {
     this.usersService.createUser(users).subscribe(
       (data) => {
@@ -46,10 +50,8 @@ export class UserCreateComponent implements OnInit {
       },
       (error) => {
         console.error(error);
-
       }
     )
-
   }
 
 }

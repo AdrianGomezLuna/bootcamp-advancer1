@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
+import { Users } from '../../interface/users.interface';
 
 @Component({
   selector: 'app-user-detail',
@@ -9,8 +10,30 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class UserDetailComponent implements OnInit {
 
-  user: any = null;
-  message: string = '';
+  public user: Users = {
+    id: '',
+    name: '',
+    username: '',
+    email: '',
+    address: {
+      street: '',
+      suite: '',
+      city: '',
+      zipcode: '',
+      geo: {
+        lat: '',
+        lng: ''
+      }
+    },
+    phone: '',
+    website: '',
+    company: {
+      name: '',
+      catchPhrase: '',
+      bs: ''
+     }
+  };
+  public message: string = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -24,10 +47,31 @@ export class UserDetailComponent implements OnInit {
       (data) => {
         this.user = data;
         console.log(data);
-
       },
       (error) => {
-        this.user = null;
+        this.user =  {
+          id: '',
+          name: '',
+          username: '',
+          email: '',
+          address: {
+            street: '',
+            suite: '',
+            city: '',
+            zipcode: '',
+            geo: {
+              lat: '',
+              lng: ''
+            }
+          },
+          phone: '',
+          website: '',
+          company: {
+            name: '',
+            catchPhrase: '',
+            bs: ''
+           }
+        };
         console.error(error);
       }
     )
