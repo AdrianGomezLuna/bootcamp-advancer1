@@ -1,3 +1,10 @@
-.mat-tab-group {
-    margin-bottom: 48px;
+.mat-list-base[dense] {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background: rgb(231, 231, 231);
+    .mat-list-item {
+        display: inline-flex;
+        justify-content: center;
+    }
 }

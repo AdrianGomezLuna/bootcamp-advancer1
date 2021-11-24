@@ -17,8 +17,6 @@ export class AllUsersComponent implements OnInit {
     this.usersService.getUsers().subscribe(
       (data) => {
         this.allUsers = data;
-        console.log(data);
-
       },
       (error) => {
         this.allUsers = [];

@@ -14,4 +14,8 @@ export class UsersService {
   getUsers(): Observable<any>{
     return this.http.get(environment.apiURL);
   }
+
+  getUser(id: string): Observable<any>{
+    return this.http.get(environment.apiURL + id);
+  }
 }

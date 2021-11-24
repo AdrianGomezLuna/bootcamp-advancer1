@@ -1,8 +1,4 @@
-<p>all-users works!</p>
-
-<!-- <p *ngFor="let item of allUsers">
-    {{ item.id | json }}
-</p> -->
+<h1>Listado de usuarios</h1>
 
 <button mat-raised-button color="primary">Basic</button>
 
@@ -33,9 +29,13 @@
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> actions </th>
         <td mat-cell *matCellDef="let element">
-            <div>
-                <a href=""> uno </a>
-                <a href=""> dos </a>
+            <div class="iconos">
+                <a routerLink="/user-detail/{{element.id}}">
+                    <mat-icon>contacts</mat-icon>
+                </a>
+                <a routerLink="/allUsers">
+                    <mat-icon>delete_forever</mat-icon>
+                </a>
             </div>
         </td>
     </ng-container>
