@@ -1,6 +1,6 @@
 <h1>Listado de usuarios</h1>
 
-<button mat-raised-button color="primary">New user</button>
+<button mat-raised-button color="primary" routerLink="/create">New user</button>
 
 <table mat-table [dataSource]="allUsers" class="mat-elevation-z8">
 
@@ -33,7 +33,7 @@
                 <a routerLink="/user-detail/{{element.id}}">
                     <mat-icon>contacts</mat-icon>
                 </a>
-                <a routerLink="/allUsers">
+                <a type="button" (click)="deleteUser(element.id)">
                     <mat-icon>delete_forever</mat-icon>
                 </a>
             </div>

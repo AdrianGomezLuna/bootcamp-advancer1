@@ -25,4 +25,21 @@ export class AllUsersComponent implements OnInit {
     )
   }
 
+  /**
+   * Delete user by id
+   * @param id
+   */
+  deleteUser(id: string){
+    console.log('Borrar', id);
+    this.usersService.deleteUser(id).subscribe(
+      (data) => {
+        console.log('User Delete');
+        alert('User Delete');
+      },
+      (error) => {
+        console.error(error);
+      }
+    )
+  }
+
 }

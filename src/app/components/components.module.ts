@@ -26,7 +26,9 @@ import { UserCreateComponent } from './user-create/user-create.component';
   exports: [
     HomeComponent,
     AllUsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UserCreateComponent
+
   ]
 })
 export class ComponentsModule { }
