@@ -1,6 +1,6 @@
 <div class="cuerpo">
     <mat-card class="container">
-        <!-- <form #searchChar="ngForm">
+        <form #searchChar="ngForm">
             <mat-card-subtitle>
                 <mat-label>
                     Datos:
@@ -11,9 +11,9 @@
                     <mat-label>
                         Name:
                     </mat-label>
-                    <input matInput type="text" name="name" #name="ngModel" [(ngModel)]="name">
-                    <!-- <mat-error *ngIf="name.invalid && (name.dirty || name.touched)"></mat-error> -->
-        <!-- </mat-form-field>
+                    <input matInput type="text" name="name" #name="ngModel" [(ngModel)]="user.name">
+                    <mat-error *ngIf="name.invalid && (name.dirty || name.touched)"></mat-error>
+                </mat-form-field>
                 <mat-form-field class="col-md-4 col-sm-12" appearance="outline">
                     <mat-label>
                         Username:
@@ -27,9 +27,9 @@
                     <input matInput type="email" name="email" #name="ngModel" [(ngModel)]="user.email">
                     <mat-error *ngIf="name.invalid && (name.dirty || name.touched)"></mat-error>
                 </mat-form-field>
-            </mat-card-content> -->
+            </mat-card-content>
 
-        <!-- <mat-card-content class="text-center">
+            <mat-card-content class="text-center">
                 <mat-form-field class="col-md-4 col-sm-12" appearance="outline">
                     <mat-label>
                         Phone:
@@ -42,9 +42,9 @@
                     </mat-label>
                     <input matInput type="text" name="website" #name="ngModel" [(ngModel)]="user.website">
                 </mat-form-field>
-            </mat-card-content> -->
+            </mat-card-content>
 
-        <!-- <mat-card-subtitle>
+            <mat-card-subtitle>
                 <mat-label>
                     Address:
                 </mat-label>
@@ -68,9 +68,9 @@
                     </mat-label>
                     <input matInput type="text" name="city" #name="ngModel" [(ngModel)]="user.address.city">
                 </mat-form-field>
-            </mat-card-content> -->
+            </mat-card-content>
 
-        <!-- <mat-card-content>
+            <mat-card-content>
                 <mat-form-field class="col-md-4 col-sm-12" appearance="outline">
                     <mat-label>
                         Zipcode:
@@ -118,7 +118,7 @@
             <mat-card-content class="text-center">
                 <button mat-raised-button color="primary" (click)="create(user)">Create a new User</button>
             </mat-card-content>
-        </form> -->
+        </form>
 
     </mat-card>
 </div>

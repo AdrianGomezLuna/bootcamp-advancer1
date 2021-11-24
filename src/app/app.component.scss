@@ -1,10 +1,15 @@
 .mat-list-base[dense] {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
-    background: rgb(231, 231, 231);
+    align-content: center;
+    background: black;
+    height: 80px;
     .mat-list-item {
         display: inline-flex;
         justify-content: center;
+        align-self: center;
+        a {
+            color: blanchedalmond;
+        }
     }
 }

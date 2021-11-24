@@ -33,8 +33,8 @@ export class AllUsersComponent implements OnInit {
     console.log('Borrar', id);
     this.usersService.deleteUser(id).subscribe(
       (data) => {
-        console.log('User Delete');
-        alert('User Delete');
+        console.log(`User Delete by ID: ${id}`);
+        alert(`User Delete by ID: ${id}`);
       },
       (error) => {
         console.error(error);

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Users } from "src/app/interface/users.interface";
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-user-create',
@@ -7,14 +9,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserCreateComponent implements OnInit {
 
-  user: any = null;
+  public user: Users = {
+    id: '',
+    name: '',
+    username: '',
+    email: '',
+    address: {
+      street: '',
+      suite: '',
+      city: '',
+      zipcode: '',
+      geo: {
+        lat: '',
+        lng: ''
+      }
+    },
+    phone: '',
+    website: '',
+    company: {
+      name: '',
+      catchPhrase: '',
+      bs: ''
+     }
+  };
 
-  constructor() { }
+  constructor(private usersService: UsersService) { }
 
   ngOnInit(): void {
   }
 
-  create(users: any) {
+  create(users: Users) {
+    this.usersService.createUser(users).subscribe(
+      (data) => {
+        console.log(data);
+        alert('Ususario creado');
+      },
+      (error) => {
+        console.error(error);
+
+      }
+    )
 
   }
 
